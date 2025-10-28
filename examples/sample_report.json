@@ -1,0 +1,87 @@
+{
+  "discovered_endpoints": [
+    {
+      "endpoint_url": "https://jsonplaceholder.typicode.com/posts",
+      "http_method": "GET",
+      "endpoint_type": "REST_API",
+      "inferred_purpose": "Retrieves data - Content creation or social features endpoint",
+      "response_status_code": 200,
+      "key_headers": {
+        "etag": {
+          "value": "W/\"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM\"",
+          "type": "weak"
+        },
+        "content_type": "application/json; charset=utf-8"
+      },
+      "response_body_snippet": "[{\"userId\":1,\"id\":1,\"title\":\"sunt aut facere repellat provident\",\"body\":\"quia et suscipit\\nsuscipit...\"}"
+    },
+    {
+      "endpoint_url": "https://jsonplaceholder.typicode.com/users/1",
+      "http_method": "GET",
+      "endpoint_type": "REST_API",
+      "inferred_purpose": "Retrieves data - User data or authentication endpoint",
+      "response_status_code": 200,
+      "key_headers": {
+        "etag": {
+          "value": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\"",
+          "type": "weak"
+        },
+        "content_type": "application/json; charset=utf-8"
+      },
+      "response_body_snippet": "{\"id\":1,\"name\":\"Leanne Graham\",\"username\":\"Bret\",\"email\":\"Sincere@april.biz\"...}"
+    },
+    {
+      "endpoint_url": "https://api.example.com/v2/products?page=1",
+      "http_method": "GET",
+      "endpoint_type": "REST_API",
+      "inferred_purpose": "Retrieves data - Product/item catalog endpoint",
+      "response_status_code": 200,
+      "key_headers": {
+        "etag": {
+          "value": "\"33a64df551425fcc55e4d42a148795d9\"",
+          "type": "strong"
+        },
+        "link_header": [
+          {
+            "rel": "next",
+            "url": "https://api.example.com/v2/products?page=2"
+          },
+          {
+            "rel": "last",
+            "url": "https://api.example.com/v2/products?page=10"
+          }
+        ],
+        "content_type": "application/json"
+      },
+      "response_body_snippet": "{\"products\":[{\"id\":1,\"name\":\"Widget\",\"price\":19.99},...], \"pagination\":{\"page\":1,\"per_page\":20}}"
+    },
+    {
+      "endpoint_url": "https://api.example.com/graphql",
+      "http_method": "POST",
+      "endpoint_type": "GRAPHQL",
+      "inferred_purpose": "GraphQL API endpoint - handles queries and mutations",
+      "response_status_code": 200,
+      "key_headers": {
+        "content_type": "application/json"
+      },
+      "response_body_snippet": "{\"data\":{\"user\":{\"id\":\"123\",\"name\":\"John Doe\",\"posts\":[{\"id\":\"1\",\"title\":\"Hello World\"}]}}}"
+    },
+    {
+      "endpoint_url": "https://example.com/api/search?q=test",
+      "http_method": "GET",
+      "endpoint_type": "REST_API",
+      "inferred_purpose": "Retrieves data - Search functionality endpoint",
+      "response_status_code": 200,
+      "key_headers": {
+        "content_type": "application/json"
+      },
+      "response_body_snippet": "{\"results\":[{\"id\":1,\"title\":\"Test Result 1\"},{\"id\":2,\"title\":\"Test Result 2\"}],\"total\":42}"
+    }
+  ],
+  "summary": {
+    "total_endpoints": 5,
+    "rest_api_count": 4,
+    "graphql_count": 1,
+    "json_data_count": 0
+  }
+}
